@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AABDCDE2C4FE0CD005544FD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABDCDD2C4FE0CD005544FD /* Team.swift */; };
+		2AABDCE02C4FE39A005544FD /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABDCDF2C4FE39A005544FD /* TeamDetailsViewController.swift */; };
 		2AFEE66C2C4EA50E000B8856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE66B2C4EA50E000B8856 /* AppDelegate.swift */; };
 		2AFEE66E2C4EA50E000B8856 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE66D2C4EA50E000B8856 /* SceneDelegate.swift */; };
-		2AFEE6702C4EA50E000B8856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE66F2C4EA50E000B8856 /* ViewController.swift */; };
 		2AFEE6732C4EA50E000B8856 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2AFEE6722C4EA50E000B8856 /* Base */; };
 		2AFEE6752C4EA50F000B8856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AFEE6742C4EA50F000B8856 /* Assets.xcassets */; };
 		2AFEE6782C4EA50F000B8856 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2AFEE6772C4EA50F000B8856 /* Base */; };
 		2AFEE6832C4EA50F000B8856 /* NBAPlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE6822C4EA50F000B8856 /* NBAPlayersTests.swift */; };
 		2AFEE68D2C4EA50F000B8856 /* NBAPlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE68C2C4EA50F000B8856 /* NBAPlayersUITests.swift */; };
 		2AFEE68F2C4EA50F000B8856 /* NBAPlayersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE68E2C4EA50F000B8856 /* NBAPlayersUITestsLaunchTests.swift */; };
+		2AFEE69C2C4EA5BE000B8856 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE69B2C4EA5BE000B8856 /* PlayersViewController.swift */; };
+		2AFEE69E2C4EA99D000B8856 /* PlayersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE69D2C4EA99D000B8856 /* PlayersDetailsViewController.swift */; };
+		2AFEE6A02C4EABC7000B8856 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE69F2C4EABC7000B8856 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AABDCDD2C4FE0CD005544FD /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		2AABDCDF2C4FE39A005544FD /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		2AFEE6682C4EA50E000B8856 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFEE66B2C4EA50E000B8856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AFEE66D2C4EA50E000B8856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2AFEE66F2C4EA50E000B8856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2AFEE6722C4EA50E000B8856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AFEE6742C4EA50F000B8856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AFEE6772C4EA50F000B8856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		2AFEE6882C4EA50F000B8856 /* NBAPlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBAPlayersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFEE68C2C4EA50F000B8856 /* NBAPlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAPlayersUITests.swift; sourceTree = "<group>"; };
 		2AFEE68E2C4EA50F000B8856 /* NBAPlayersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAPlayersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AFEE69B2C4EA5BE000B8856 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		2AFEE69D2C4EA99D000B8856 /* PlayersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDetailsViewController.swift; sourceTree = "<group>"; };
+		2AFEE69F2C4EABC7000B8856 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,11 @@
 			children = (
 				2AFEE66B2C4EA50E000B8856 /* AppDelegate.swift */,
 				2AFEE66D2C4EA50E000B8856 /* SceneDelegate.swift */,
-				2AFEE66F2C4EA50E000B8856 /* ViewController.swift */,
+				2AABDCDD2C4FE0CD005544FD /* Team.swift */,
+				2AFEE69F2C4EABC7000B8856 /* Player.swift */,
+				2AFEE69B2C4EA5BE000B8856 /* PlayersViewController.swift */,
+				2AFEE69D2C4EA99D000B8856 /* PlayersDetailsViewController.swift */,
+				2AABDCDF2C4FE39A005544FD /* TeamDetailsViewController.swift */,
 				2AFEE6712C4EA50E000B8856 /* Main.storyboard */,
 				2AFEE6742C4EA50F000B8856 /* Assets.xcassets */,
 				2AFEE6762C4EA50F000B8856 /* LaunchScreen.storyboard */,
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AFEE6702C4EA50E000B8856 /* ViewController.swift in Sources */,
+				2AABDCDE2C4FE0CD005544FD /* Team.swift in Sources */,
 				2AFEE66C2C4EA50E000B8856 /* AppDelegate.swift in Sources */,
 				2AFEE66E2C4EA50E000B8856 /* SceneDelegate.swift in Sources */,
+				2AFEE69E2C4EA99D000B8856 /* PlayersDetailsViewController.swift in Sources */,
+				2AFEE6A02C4EABC7000B8856 /* Player.swift in Sources */,
+				2AABDCE02C4FE39A005544FD /* TeamDetailsViewController.swift in Sources */,
+				2AFEE69C2C4EA5BE000B8856 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
