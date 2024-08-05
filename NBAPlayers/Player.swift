@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Player{
+struct PlayersResponse: Decodable {
+    let data: [Player]
+}
+
+struct Player: Decodable {
     let firstName: String
     let lastName: String
     
-    var team: Team
+    let team: Team
 
     let position: String
     
@@ -19,10 +23,20 @@ struct Player{
         team.name
     }
     
-    let height: String
+    var height: String
     
     var FullName: String {
         firstName + " " + lastName
     }
     
+    enum CodingKeys: String, CodingKey {
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case position = "position"
+        case team = "team"
+        case height = "height"
+    }
 }
+
+let lakers = Team(name: "Lakers", city: "Los Angeles", conference: "West")
+let heat = Team(name: "Heat", city: "Miami", conference: "East")

@@ -9,9 +9,13 @@ import UIKit
 
 class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let teams: [Team] = [Team(name: "Lakers", city: "Los Angeles", conference: "West"), Team(name: "Heat", city: "Miami", conference: "East")]
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var players: [Player] = []
+    
+    let apiClient: ApiClient = ApiClientImp()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
@@ -37,7 +41,19 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        players = [Player(firstName: "Joah", lastName: "Smit", team: teams[0], position: "SF", height: "6'88''"),
-        Player(firstName: "Bob", lastName: "Stan", team: teams[1], position: "BG", height: "5'67''")]
+        activityIndicator.startAnimating()
+        apiClient.getPlayers(completion: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let players):
+                    self.players = players
+                    self.tableView.reloadData()
+                case .failure:
+                    self.players = []
+                    self.tableView.reloadData()
+                }
+                self.activityIndicator.stopAnimating()
+            }
+        })
     }
 }

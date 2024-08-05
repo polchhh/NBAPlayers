@@ -66,6 +66,9 @@
                                     <outlet property="delegate" destination="Lfp-b6-sSG" id="peF-Qc-9W6"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="v8a-6B-ueS">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aF7-Ve-lpY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,9 +77,15 @@
                             <constraint firstItem="Cbm-bb-mky" firstAttribute="leading" secondItem="aF7-Ve-lpY" secondAttribute="leading" id="FZy-Rp-gfy"/>
                             <constraint firstItem="Cbm-bb-mky" firstAttribute="trailing" secondItem="aF7-Ve-lpY" secondAttribute="trailing" id="QRO-KY-p25"/>
                             <constraint firstItem="Cbm-bb-mky" firstAttribute="top" secondItem="aF7-Ve-lpY" secondAttribute="top" id="j9L-EL-dFR"/>
+                            <constraint firstItem="v8a-6B-ueS" firstAttribute="centerX" secondItem="Kae-0F-j9h" secondAttribute="centerX" id="ozS-5z-a6s"/>
+                            <constraint firstItem="v8a-6B-ueS" firstAttribute="centerY" secondItem="Kae-0F-j9h" secondAttribute="centerY" id="zwD-8E-Zkb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Players" id="tTa-hb-ZyH"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="v8a-6B-ueS" id="F5r-fd-Zmj"/>
+                        <outlet property="tableView" destination="Cbm-bb-mky" id="bw8-F2-Ou5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAt-eq-0U2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

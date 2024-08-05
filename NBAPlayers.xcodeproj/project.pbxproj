@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2AABDCDE2C4FE0CD005544FD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABDCDD2C4FE0CD005544FD /* Team.swift */; };
 		2AABDCE02C4FE39A005544FD /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABDCDF2C4FE39A005544FD /* TeamDetailsViewController.swift */; };
+		2AABDCE32C4FFDA0005544FD /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABDCE22C4FFDA0005544FD /* ApiClient.swift */; };
+		2AABDCE92C611CBA005544FD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABDCE82C611CBA005544FD /* Secret.swift */; };
 		2AFEE66C2C4EA50E000B8856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE66B2C4EA50E000B8856 /* AppDelegate.swift */; };
 		2AFEE66E2C4EA50E000B8856 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEE66D2C4EA50E000B8856 /* SceneDelegate.swift */; };
 		2AFEE6732C4EA50E000B8856 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2AFEE6722C4EA50E000B8856 /* Base */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		2AABDCDD2C4FE0CD005544FD /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		2AABDCDF2C4FE39A005544FD /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		2AABDCE22C4FFDA0005544FD /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		2AABDCE82C611CBA005544FD /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		2AFEE6682C4EA50E000B8856 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFEE66B2C4EA50E000B8856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AFEE66D2C4EA50E000B8856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AABDCE12C4FFD6F005544FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2AABDCE22C4FFDA0005544FD /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		2AFEE65F2C4EA50E000B8856 = {
 			isa = PBXGroup;
 			children = (
@@ -107,16 +119,18 @@
 		2AFEE66A2C4EA50E000B8856 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
+				2AABDCE12C4FFD6F005544FD /* Network */,
 				2AFEE66B2C4EA50E000B8856 /* AppDelegate.swift */,
 				2AFEE66D2C4EA50E000B8856 /* SceneDelegate.swift */,
 				2AABDCDD2C4FE0CD005544FD /* Team.swift */,
 				2AFEE69F2C4EABC7000B8856 /* Player.swift */,
-				2AFEE69B2C4EA5BE000B8856 /* PlayersViewController.swift */,
 				2AFEE69D2C4EA99D000B8856 /* PlayersDetailsViewController.swift */,
 				2AABDCDF2C4FE39A005544FD /* TeamDetailsViewController.swift */,
+				2AFEE69B2C4EA5BE000B8856 /* PlayersViewController.swift */,
 				2AFEE6712C4EA50E000B8856 /* Main.storyboard */,
 				2AFEE6742C4EA50F000B8856 /* Assets.xcassets */,
 				2AFEE6762C4EA50F000B8856 /* LaunchScreen.storyboard */,
+				2AABDCE82C611CBA005544FD /* Secret.swift */,
 				2AFEE6792C4EA50F000B8856 /* Info.plist */,
 			);
 			path = NBAPlayers;
@@ -273,9 +287,11 @@
 				2AABDCDE2C4FE0CD005544FD /* Team.swift in Sources */,
 				2AFEE66C2C4EA50E000B8856 /* AppDelegate.swift in Sources */,
 				2AFEE66E2C4EA50E000B8856 /* SceneDelegate.swift in Sources */,
+				2AABDCE32C4FFDA0005544FD /* ApiClient.swift in Sources */,
 				2AFEE69E2C4EA99D000B8856 /* PlayersDetailsViewController.swift in Sources */,
 				2AFEE6A02C4EABC7000B8856 /* Player.swift in Sources */,
 				2AABDCE02C4FE39A005544FD /* TeamDetailsViewController.swift in Sources */,
+				2AABDCE92C611CBA005544FD /* Secret.swift in Sources */,
 				2AFEE69C2C4EA5BE000B8856 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
