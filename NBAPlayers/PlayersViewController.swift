@@ -13,6 +13,10 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var reloadButton: UIButton!
+    
     var players: [Player] = []
     
     let apiClient: ApiClient = ApiClientImp()
@@ -38,22 +42,49 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
+    @IBAction func onReloadButtonClick(_ sender: Any) {
+        reload()
+    }
+    
+    func showLoading(){
         activityIndicator.startAnimating()
+        errorLabel.isHidden = true
+        reloadButton.isHidden = true
+    }
+    
+    func showError(){
+        activityIndicator.stopAnimating()
+        errorLabel.isHidden = false
+        reloadButton.isHidden = false
+    }
+    
+    func showData(){
+        activityIndicator.stopAnimating()
+        errorLabel.isHidden = true
+        reloadButton.isHidden = true
+    }
+    
+    func reload(){
+        showLoading()
         apiClient.getPlayers(completion: { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let players):
                     self.players = players
                     self.tableView.reloadData()
+                    self.showData()
                 case .failure:
                     self.players = []
                     self.tableView.reloadData()
+                    self.showError()
                 }
-                self.activityIndicator.stopAnimating()
             }
         })
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        reload()
     }
 }

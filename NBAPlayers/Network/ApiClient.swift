@@ -27,8 +27,6 @@ class ApiClientImp: ApiClient {
         let dataTask = session.dataTask(with: urlRequest, completionHandler: {
             data, response, error in
             
-            sleep(5)
-            
             guard let data = data else {
                 completion(.failure(ApiError.noData))
                 return
